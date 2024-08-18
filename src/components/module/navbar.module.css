@@ -1,0 +1,325 @@
+/* Default styles */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Your other styles */
+
+.logo {
+    width: 59px;
+    margin-top: 25px;
+    margin-left: 29px;
+    padding-bottom: 10px;
+}
+
+.labelText {
+    font-size: 25px;
+    font-weight: bold; /* Changed from font-family to font-weight */
+    font-family: 'Raleway', sans-serif; /* Ensured the font-family is applied */
+    display: flex;
+    font-optical-sizing: auto;
+    padding: 15px;
+}
+
+.logoText {
+    font-size: 19px;
+    margin-top: 17px;
+    margin-left: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.hamburger {
+    display: none;
+}
+
+.vedioCard {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1rem; 
+    padding: 1rem; 
+    margin-top: 1rem; 
+    border-radius: 0.5rem; 
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.vedio {
+    margin-top: 1rem;
+    margin-left: 5rem;
+    border-radius: 11px;
+    height: fit-content;
+}
+
+.selected {
+    border-radius: 38px;
+    background-color: #1D91AA;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    width: 125px;
+    margin: 19px;
+    padding: inherit; /* Adjust padding for better appearance */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Raleway', sans-serif;
+}
+
+.notselected {
+    border-radius: 38px;
+    background-color: #fff;
+    color: #1D91AA;
+    font-weight: bold;
+    font-size: 25px;
+    width: 125px;
+    margin: 19px;
+    padding: inherit; /* Adjust padding for better appearance */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Raleway', sans-serif;
+}
+
+.vedioComponent {
+    display: flex;
+    flex-direction: row;
+}
+
+.BestOffersCard {
+    display: flex;
+    border-radius: 11px;
+    margin: 16px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.AboutUsHomePage {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 11px;
+}
+
+.AboutUsHomePageContainer {
+    display: flex;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 11px;
+}
+
+.BestOffersContainer {
+    display: flex;
+}
+
+.BestOffersContainerForMobile {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.qrCodeSection {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 16px;
+    background-color: #1D91AA;
+    border-radius: 11px;
+}
+
+.qrCodeContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qrCodeTitle {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 16px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.li {
+    font-family: 'Raleway', sans-serif;
+}
+
+.qrCodeTextSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qrCodeDescription {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 16px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.qrCodeContentWrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.qrCodeImage {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 16px;
+}
+
+.qrCodeList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.qrCodeListItem {
+    font-size: 15px;
+    margin: 16px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 960px) {
+    .navigation {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo {
+        width: 43px;
+        margin-left: 17px;
+        padding-bottom: 10px;
+    }
+
+    .logoText {
+        font-size: 12px;
+        margin-top: 9px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .vedioCard {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .vedio {
+        margin-left: 0;
+        width: 95%;
+        margin: 12px;
+        padding: 0;
+    }
+
+    .vedioComponent {
+        flex-direction: column;
+    }
+
+    .socialBox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .BestOffersContainer {
+        display: none;
+    }
+    
+    .BestOffersContainerForMobile {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .AboutUsHomePageContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        margin: 16px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 11px;
+    }
+
+    .qrCodeTitle {
+        font-size: 28px;
+    }
+
+    .qrCodeContentWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .qrCodeDescription {
+        font-size: 13px;
+        padding: 16px;
+    }
+
+    .qrCodeListItem {
+        font-size: 10px;
+        padding: 4px;
+    }
+}
+
+.socialBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+
+.servicesCards{
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 16px;
+    border-radius: 11px;
+}
+
+.serviceContainer {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 16px;
+    border-radius: 11px;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.serviceContainer img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 19px;
+    padding: 16px;
+}
+.serviceContainer p{
+    font-size: 15px;
+}
+.serviceContainer:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px; /* Increase shadow on hover */
+    transform: scale(1.05); /* Slightly scale up the container on hover */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
