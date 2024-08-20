@@ -3,6 +3,7 @@ import JoinUs from '../components/JoinUsModule';
 import BestOffers from '../components/BestOffers';
 import AboutUsHomePage from '../components/AboutUsHomePage';
 import ContactUs from '../components/ContactUs';
+import Footer from './Footer';
 const HomePage = ()=>{
     return(
         <>
@@ -11,6 +12,7 @@ const HomePage = ()=>{
       <BestOffers/>
       <AboutUsHomePage/>
       <ContactUs/>
+      <Footer/>
       </>
     )
 }

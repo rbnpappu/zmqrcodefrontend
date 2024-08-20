@@ -141,6 +141,7 @@ body {
     margin: 16px;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    color: #fff;
 }
 
 .li {
@@ -152,6 +153,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #fff;
 }
 
 .qrCodeDescription {
@@ -160,6 +162,7 @@ body {
     margin: 16px;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    color: #fff;
 }
 
 .qrCodeContentWrapper {
@@ -182,6 +185,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
+    color: #fff;
 }
 
 .qrCodeListItem {
@@ -189,9 +193,49 @@ body {
     margin: 16px;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    color: #fff;
 }
 
 
+.contactUsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 2.5rem; /* Equivalent to mt-10 in Tailwind */
+        width: 100%;
+      
+      
+}
+
+.footerInfoContainer {
+    display: flex;
+    flex-direction: row; /* Default direction */
+    align-items: center;
+    text-align: left;
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .footerInfoContainer p {
+    padding: 1.5rem;
+  }
+  
+  .contactUs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 11px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                rgba(0, 0, 0, 0.17) 0px 12px 13px,
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
 /* Responsive Styles */
 @media (max-width: 960px) {
     .navigation {
@@ -277,6 +321,43 @@ body {
         font-size: 10px;
         padding: 4px;
     }
+
+    .contactUsContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;     
+}
+.footerInfoContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footerInfoContainer p{
+    font-size: 16px;
+  }
+
+  .footerInfoContainer p {
+    padding: 0.5rem;
+  }
+  
+  .contactUs{
+  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 16px;
+        margin: 16px;
+        border-radius: 11px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+                    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+  
 }
 
 .socialBox {

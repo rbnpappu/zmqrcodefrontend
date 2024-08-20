@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
+import styles from './module/navbar.module.css';
+import {  faUser } from '@fortawesome/free-solid-svg-icons';
 
 
 const ContactUs = () => {
@@ -8,6 +8,13 @@ const ContactUs = () => {
 
     return (
         <div  id="contact-section" className='flex justify-center items-center rounded-lg p-5 m-[16px] rounded-[11px]' style={{ boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" }}>
+            <div className={styles.contactUs} >
+            <img
+                        src='./contactUs.jpeg'
+                        alt='Contact Us'
+                  
+                    />
+
             <div className="w-full max-w-lg">
                 <label className="text-2xl font-bold font-raleway mb-4 block">Contact Us</label>
 
@@ -47,32 +54,9 @@ const ContactUs = () => {
                     </span>
                 </button>
 
-                <label className="mt-4  justify-center text-2xl flex font-bold font-raleway m-[16px]">Join The Community</label>
 
-                <div className="flex  justify-center mt-2">
-                    <a href='https://www.instagram.com/zmqrcode?igsh=YzljYTk1ODg3Zg==' className="mr-2 p-1">
-                        <FontAwesomeIcon icon={faInstagram} size="2x" color="#1D91AA" />
-                    </a>
-                    <a href='https://www.facebook.com/people/ZMQRCodes/61559950102078/' className="mr-2 p-1">
-                        <FontAwesomeIcon icon={faFacebook} size="2x" color="#1D91AA" />
-                    </a>
-                    <a href='https://x.com/i/flow/login?redirect_after_login=%2Fzmqrcode' className="mr-2 p-1">
-                        <FontAwesomeIcon icon={faTwitter} size="2x" color="#1D91AA" />
-                    </a>
-                </div>
-
-                <label className="mt-4 text-2xl font-bold font-raleway m-[16px] flex justify-center">Get In Touch</label>
-                <div className="mt-2 text-lg">
-                    <div className='flex  justify-center flex-row items-center mb-2'>
-                        <FontAwesomeIcon icon={faPhone} className="mr-2" color='#1D91AA' />
-                        <p className='text-black  font-bold font-raleway'>86396 83839</p>
-                    </div>
-                    <div className='flex justify-center items-center mb-2'>
-                        <FontAwesomeIcon icon={faEnvelope} className="mr-2" color='#1D91AA' />
-                        <p className='text-black  font-bold font-raleway'>connect@zmqrcode.com</p>
-                    </div>
-
-                </div>
+              
+            </div>
             </div>
         </div>
     );

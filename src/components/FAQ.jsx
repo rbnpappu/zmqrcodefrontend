@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import AboutUsHomePage from './AboutUsHomePage';
 import ContactUs from './ContactUs';
+import Footer from './Footer';
 
 const FAQ = () => {
     return (
@@ -96,6 +97,7 @@ const FAQ = () => {
             </div>
             <AboutUsHomePage />
             <ContactUs />
+            <Footer/>
         </div>
     );
 }
