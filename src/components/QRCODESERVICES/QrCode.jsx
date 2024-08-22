@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { setstickactiveValue } from '../store/stickactive';
 import { Link } from 'react-router-dom';
 import NavBar from '../NavBar';
 import styles from '../module/navbar.module.css';
@@ -8,8 +10,46 @@ import services from '../resources/services.json';
 import Footer from '../Footer';
 
 const QrCode = () => {
+    const navRef = useRef(null); // Reference for the NavBar container
+    const [scrollTop, setScrollTop] = useState(0);
+    const [navHeight, setNavHeight] = useState(0); // NavBar height
+
+    const dispatch = useDispatch();
+
+    const handleScroll = () => {
+        setScrollTop(window.scrollY);
+    };
+
+    const updateNavHeight = () => {
+        if (navRef.current) {
+            const { height } = navRef.current.getBoundingClientRect();
+            setNavHeight(height);
+        }
+    };
+
+    useEffect(() => {
+        updateNavHeight();
+        window.addEventListener('resize', updateNavHeight);
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('resize', updateNavHeight);
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    useEffect(() => {
+        const threshold = 200; // Adjust based on when you want to trigger stickiness
+  
+        if (scrollTop > threshold) {
+            dispatch(setstickactiveValue(true));
+        } else {
+            dispatch(setstickactiveValue(false));
+        }
+    }, [scrollTop, navHeight, dispatch]);
+
     return (
-        <div className={styles.container}>
+        <div className={styles.container} ref={navRef}>
             <NavBar />
             <div className="flex justify-start p-2">
                 <Link to="/" className="text-[16px] underline decoration-[#1D91AA]">
@@ -25,7 +65,7 @@ const QrCode = () => {
                         </p>
                         <div className={styles.qrCodeContentWrapper}>
                             <img
-                                src="/QrCodeServices.jpg" // Ensure this path is correct
+                                src="/QrCodeServices.jpg" // Ensure this path is correct; it should be in the `public` directory
                                 className={styles.qrCodeImage}
                                 alt="QR Code"
                             />
@@ -54,7 +94,7 @@ const QrCode = () => {
                         <label className="text-2xl font-bold font-raleway">{item.name}</label>
                         <Link to="/comingsoon">
                             <img
-                                src={item.img} // Ensure this path is correct
+                                src={item.img} // Ensure this path is correct based on where `item.img` is defined in your `services.json`
                                 className="w-[255px] rounded-[11px] p-1"
                                 alt="Service"
                             />
@@ -68,7 +108,7 @@ const QrCode = () => {
 
             <AboutUsHomePage />
             <ContactUs />
-            <Footer/>
+            <Footer />
         </div>
     );
 };

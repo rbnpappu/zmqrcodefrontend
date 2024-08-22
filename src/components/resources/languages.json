@@ -1,0 +1,42 @@
+[
+    {
+      "name": "Gujarati",
+      "code": "gu",
+      "native_script": "ગુજરાતી"
+    },
+    {
+      "name": "Hindi",
+      "code": "hi",
+      "native_script": "हिन्दी"
+    },
+    {
+      "name": "Kannada",
+      "code": "kn",
+      "native_script": "ಕನ್ನಡ"
+    },
+    {
+      "name": "Malayalam",
+      "code": "ml",
+      "native_script": "മലയാളം"
+    },
+    {
+      "name": "Marathi",
+      "code": "mr",
+      "native_script": "मराठी"
+    },
+    {
+      "name": "Punjabi",
+      "code": "pa",
+      "native_script": "ਪੰਜਾਬੀ"
+    },
+    {
+      "name": "Tamil",
+      "code": "ta",
+      "native_script": "தமிழ்"
+    },
+    {
+      "name": "Telugu",
+      "code": "te",
+      "native_script": "తెలుగు"
+    }
+  ]

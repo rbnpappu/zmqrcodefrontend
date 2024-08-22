@@ -8,10 +8,9 @@ body {
 /* Your other styles */
 
 .logo {
-    width: 59px;
-    margin-top: 25px;
-    margin-left: 29px;
-    padding-bottom: 10px;
+    width: 80px;
+    height: 70px;
+    margin-left: 16px;
 }
 
 .labelText {
@@ -20,7 +19,7 @@ body {
     font-family: 'Raleway', sans-serif; /* Ensured the font-family is applied */
     display: flex;
     font-optical-sizing: auto;
-    padding: 15px;
+    margin-top: 15px;
 }
 
 .logoText {
@@ -50,6 +49,7 @@ body {
     margin-left: 5rem;
     border-radius: 11px;
     height: fit-content;
+    width: 65%;
 }
 
 .selected {
@@ -236,8 +236,21 @@ body {
                 rgba(0, 0, 0, 0.17) 0px 12px 13px,
                 rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
+
+
+  .formsignupandlogin{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-bottom: 1rem; /* Adjust margin as needed */
+    padding-left: 1.25rem; /* Adjust padding as needed */
+    padding-right: 1.25rem; /* Adjust padding as needed */
+  }
 /* Responsive Styles */
 @media (max-width: 960px) {
+    .formsignupandlogin{
+        width: 100%;
+      }
     .navigation {
         display: none;
     }
@@ -404,3 +417,29 @@ body {
     transform: scale(1.05); /* Slightly scale up the container on hover */
     cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
 }
+
+
+/* Style for the navbar */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; /* Equivalent to p-4 in Tailwind CSS */
+    background-color: #1D91AA;
+    height: 80px; /* Custom blue color */
+  }
+  
+  /* Style for the sticky navbar */
+  .sticky {
+    display: flex;
+    justify-content: space-between;
+    position: fixed; /* Correct property for fixed positioning */
+    top: 0; /* Positioned at the top of the viewport */
+    width: 100%; /* Full width */
+    z-index: 50; 
+    height: 80px;/* Optional: Ensure the navbar stays on top of other content */
+    align-items: center;
+    padding: 1rem; /* Equivalent to p-4 in Tailwind CSS */
+    background-color: #1D91AA; 
+  }
+  

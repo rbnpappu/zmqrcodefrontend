@@ -39,7 +39,7 @@ const JoinUs = () => {
                 >
                     Your browser does not support the video tag.
                 </video>
-                <div className='flex flex-col w-full mb-4 pl-5 pr-5'>
+                <div className={styles.formsignupandlogin}>
                     <div className='flex flex-row'>
                         <button 
                             className={switchButton ? styles.selected : styles.notselected} 
