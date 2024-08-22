@@ -76,10 +76,12 @@ const LoginUp = () => {
             setAlert({ show: true, message: 'Please fill in both OTP and new password fields' });
             return;
         }
+    
         try {
-            const response = await axios.post('http://localhost:3000/resetPassword', userResetData, {
+            const response = await axios.post('http://localhost:3000/resetPassword', JSON.stringify(userResetData), {
                 headers: { 'Content-Type': 'application/json' }
             });
+    
             if (response.status === 200) {
                 setAlert({ show: true, message: 'Password reset successful' });
                 setResetPassword(false);
@@ -89,10 +91,11 @@ const LoginUp = () => {
                 setAlert({ show: true, message: 'Password reset failed' });
             }
         } catch (error) {
+            console.error('Error Details:', error.response ? error.response.data : error.message); // Log error details
             setAlert({ show: true, message: 'An error occurred during password reset' });
         }
     };
-
+    
     // Handle input change for login and password reset forms
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -169,9 +172,9 @@ const LoginUp = () => {
                             onChange={handleChange}
                             placeholder="Enter the Username"
                         />
-                        {errors.username && <span className="text-red-500">{errors.username}</span>}
+                        
                     </div>
-
+                    {errors.username && <span className="text-red-500">{errors.username}</span>}
                     {/* Password Input */}
                     <div className="flex items-center border rounded-lg w-full m-[5px] p-3">
                         <input
@@ -189,9 +192,9 @@ const LoginUp = () => {
                             onClick={togglePasswordVisibility}
                             className="cursor-pointer"
                         />
-                        {errors.password && <span className="text-red-500">{errors.password}</span>}
+                       
                     </div>
-
+                    {errors.password && <span className="text-red-500">{errors.password}</span>}
                     {/* Login Button */}
                     <button
                         className="rounded-[11px] w-full text-white"
@@ -277,8 +280,9 @@ const LoginUp = () => {
                             value={userResetData.otp}
                             onChange={handleChangeResetPassword}
                         />
-                        {errors.otp && <span className="text-red-500">{errors.otp}</span>}
+                       
                     </div>
+                    {errors.otp && <span className="text-red-500">{errors.otp}</span>}
                     <div className="flex items-center border rounded-lg w-full p-3 m-[5px]">
                         <input
                             className="border-none ml-2 p-1 w-full focus:outline-none"
@@ -295,8 +299,9 @@ const LoginUp = () => {
                             onClick={togglePasswordVisibility}
                             className="cursor-pointer"
                         />
-                        {errors.newPassword && <span className="text-red-500">{errors.newPassword}</span>}
+                       
                     </div>
+                    {errors.newPassword && <span className="text-red-500">{errors.newPassword}</span>}
                     <button
                         className="rounded-[11px] w-full text-white"
                         style={{
