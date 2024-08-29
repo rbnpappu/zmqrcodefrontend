@@ -36,6 +36,7 @@ const ContactUs = () => {
             setEnable(false); // Disable the button after form submission
         } catch (error) {
             console.error('Error updating data:', error);
+            // Optionally show an error alert
         }
     };
 
@@ -73,6 +74,7 @@ const ContactUs = () => {
                             onChange={handleChange}
                             className="border-none ml-2 p-1 w-full focus:outline-none"
                             placeholder="Please Type UserName"
+                            aria-label="Name"
                         />
                     </div>
 
@@ -83,6 +85,7 @@ const ContactUs = () => {
                             onChange={handleChange}
                             className="border-none ml-2 p-3 w-full focus:outline-none"
                             placeholder="Send The Message"
+                            aria-label="Message"
                         />
                     </div>
 
@@ -94,6 +97,7 @@ const ContactUs = () => {
                             className="border-none ml-2 p-1 w-full focus:outline-none"
                             type='text'
                             placeholder="Enter Phone Number"
+                            aria-label="Phone Number"
                         />
                     </div>
                     <div className="flex items-center border rounded-lg w-full p-3 m-[5px]">
@@ -104,6 +108,7 @@ const ContactUs = () => {
                             className="border-none ml-2 p-1 w-full focus:outline-none"
                             type='email'
                             placeholder="Enter the Email"
+                            aria-label="Email"
                         />
                     </div>
                     <button
@@ -118,7 +123,6 @@ const ContactUs = () => {
                             Send Message
                         </span>
                     </button>
-
                 </div>
             </div>
             {showAlert && (

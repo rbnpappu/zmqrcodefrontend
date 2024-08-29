@@ -12,7 +12,7 @@ const NavBar = () => {
     const [toggleHamBurger, setToggleHamBurger] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
-    const isActive = useSelector(state => state.stickactive); // Ensure correct selector
+    const isActive = useSelector(state => state.stickactive.stickactiveValue); // Ensure correct selector
 
     const handleDropdownToggle = () => {
         setIsDropdownOpen(!isDropdownOpen);

@@ -26,7 +26,7 @@ const Footer = () => {
     const handleSubmit = async () => {
         const updatedData = JSON.stringify({ email: emailTextId }); // Correctly format data
         try {
-            const response = await axios.post('http://localhost:3000/reachus', updatedData, {
+            const response = await axios.post('http://localhost:3001/reachus', updatedData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

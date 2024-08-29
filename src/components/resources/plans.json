@@ -20,6 +20,16 @@
         }
       },
       {
+        "storageRange": "1 GB",
+        "price": 999,
+        "name": "Popular Choice",
+        "description": "Our most popular plan, offering ample space for a wide range of uses.",
+        "reviews": {
+          "count": 300000,
+          "rating": 4.5
+        }
+      },
+      {
         "storageRange": "30 MB",
         "price": 299,
         "name": "Essential Plan",
@@ -29,6 +39,7 @@
           "rating": 4.2
         }
       },
+     
       {
         "storageRange": "50 MB",
         "price": 499,
@@ -37,16 +48,6 @@
         "reviews": {
           "count": 120000,
           "rating": 4.3
-        }
-      },
-      {
-        "storageRange": "1 GB",
-        "price": 999,
-        "name": "Popular Choice",
-        "description": "Our most popular plan, offering ample space for a wide range of uses.",
-        "reviews": {
-          "count": 300000,
-          "rating": 4.5
         }
       },
       {

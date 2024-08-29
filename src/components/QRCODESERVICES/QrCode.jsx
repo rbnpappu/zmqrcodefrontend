@@ -1,6 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useDispatch } from 'react-redux';
-import { setstickactiveValue } from '../store/stickactive';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../NavBar';
 import styles from '../module/navbar.module.css';
@@ -9,47 +7,11 @@ import ContactUs from '../ContactUs';
 import services from '../resources/services.json';
 import Footer from '../Footer';
 
+
 const QrCode = () => {
-    const navRef = useRef(null); // Reference for the NavBar container
-    const [scrollTop, setScrollTop] = useState(0);
-    const [navHeight, setNavHeight] = useState(0); // NavBar height
-
-    const dispatch = useDispatch();
-
-    const handleScroll = () => {
-        setScrollTop(window.scrollY);
-    };
-
-    const updateNavHeight = () => {
-        if (navRef.current) {
-            const { height } = navRef.current.getBoundingClientRect();
-            setNavHeight(height);
-        }
-    };
-
-    useEffect(() => {
-        updateNavHeight();
-        window.addEventListener('resize', updateNavHeight);
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('resize', updateNavHeight);
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    useEffect(() => {
-        const threshold = 200; // Adjust based on when you want to trigger stickiness
-  
-        if (scrollTop > threshold) {
-            dispatch(setstickactiveValue(true));
-        } else {
-            dispatch(setstickactiveValue(false));
-        }
-    }, [scrollTop, navHeight, dispatch]);
-
+   
     return (
-        <div className={styles.container} ref={navRef}>
+        <div className={styles.container}>
             <NavBar />
             <div className="flex justify-start p-2">
                 <Link to="/" className="text-[16px] underline decoration-[#1D91AA]">

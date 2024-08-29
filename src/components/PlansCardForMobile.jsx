@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRupeeSign, faUsers } from '@fortawesome/free-solid-svg-icons';
 import StarRating from './StarRating'; // Adjust the path as needed
+import { Link } from 'react-router-dom';
 
 const PlansCard = ({ props }) => {
     const { name, description, price, storageRange, reviews = {} } = props;
@@ -41,7 +42,9 @@ const PlansCard = ({ props }) => {
             <button
                 className="flex items-center m-[16px] justify-center px-4 py-2 rounded-md transition-all duration-150 ease-in-out transform hover:scale-105 bg-white text-[#1D91AA] border-[#1D91AA] border-2 shadow-md hover:bg-[#1D91AA] hover:text-white hover:border-white"
             >
-                <span className='font-raleway text-[32px] font-medium'>Buy Now</span>
+                <Link to='/services'>
+                    <span className='font-raleway text-[32px] font-medium'>Buy Now</span>
+                </Link>
             </button>
         </div>
     );

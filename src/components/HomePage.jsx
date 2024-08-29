@@ -7,7 +7,7 @@ import Footer from './Footer';
 const HomePage = ()=>{
     return(
         <>
-        <NavBar/>
+      <NavBar/>
       <JoinUs/>
       <BestOffers/>
       <AboutUsHomePage/>

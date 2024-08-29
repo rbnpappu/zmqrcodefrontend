@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import GoogleLoginButton from '../SocialLoginbuttons/GoogleSocialLoginButton';
 import FacebookLoginButton from '../SocialLoginbuttons/FaceBookSocialLogin';
-
+import CustomAlert from '../CustomAlertForSubmision';
 
 const LoginUp = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
@@ -32,8 +32,14 @@ const LoginUp = () => {
             });
             if (response.status === 200) {
                 setAlert({ show: true, message: 'Login successful' });
-                navigate('/services');
+                setTimeout(()=>{
+                    if(!alert.show)
+                        {navigate('/services');
+                        }
+                },2000)
+           
                 setUserData({ username: "", password: "" });
+                setAlert({ show: true, message: 'Welcome To ZM QR Code.in' });
             } else {
                 setAlert({ show: true, message: 'Login failed' });
             }
@@ -62,6 +68,7 @@ const LoginUp = () => {
                 setForgetPassword(false);
                 setResetPassword(true);
                 setUserResetData(prev => ({ ...prev, email }));
+                setAlert({ show: true, message: 'Check Your Regsiter Email Otp is sent' });
             } else {
                 setAlert({ show: true, message: 'Failed to submit email' });
             }
@@ -76,17 +83,18 @@ const LoginUp = () => {
             setAlert({ show: true, message: 'Please fill in both OTP and new password fields' });
             return;
         }
-    
+
         try {
             const response = await axios.post('http://localhost:3000/resetPassword', JSON.stringify(userResetData), {
                 headers: { 'Content-Type': 'application/json' }
             });
-    
+
             if (response.status === 200) {
                 setAlert({ show: true, message: 'Password reset successful' });
                 setResetPassword(false);
                 setForgetPassword(false);
                 setUserData({ username: "", password: "" });
+                setAlert({ show: true, message: 'Your Password is reset ' });
             } else {
                 setAlert({ show: true, message: 'Password reset failed' });
             }
@@ -95,7 +103,7 @@ const LoginUp = () => {
             setAlert({ show: true, message: 'An error occurred during password reset' });
         }
     };
-    
+
     // Handle input change for login and password reset forms
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -172,7 +180,7 @@ const LoginUp = () => {
                             onChange={handleChange}
                             placeholder="Enter the Username"
                         />
-                        
+
                     </div>
                     {errors.username && <span className="text-red-500">{errors.username}</span>}
                     {/* Password Input */}
@@ -192,7 +200,7 @@ const LoginUp = () => {
                             onClick={togglePasswordVisibility}
                             className="cursor-pointer"
                         />
-                       
+
                     </div>
                     {errors.password && <span className="text-red-500">{errors.password}</span>}
                     {/* Login Button */}
@@ -222,8 +230,8 @@ const LoginUp = () => {
 
                     {/* Social Login Buttons */}
                     <div className="flex flex-col mt-4">
-                        <GoogleLoginButton/>
-                        <FacebookLoginButton/>
+                        <GoogleLoginButton />
+                        <FacebookLoginButton />
                     </div>
                 </>
             )}
@@ -280,7 +288,7 @@ const LoginUp = () => {
                             value={userResetData.otp}
                             onChange={handleChangeResetPassword}
                         />
-                       
+
                     </div>
                     {errors.otp && <span className="text-red-500">{errors.otp}</span>}
                     <div className="flex items-center border rounded-lg w-full p-3 m-[5px]">
@@ -299,7 +307,7 @@ const LoginUp = () => {
                             onClick={togglePasswordVisibility}
                             className="cursor-pointer"
                         />
-                       
+
                     </div>
                     {errors.newPassword && <span className="text-red-500">{errors.newPassword}</span>}
                     <button
@@ -325,12 +333,23 @@ const LoginUp = () => {
                 </div>
             )}
 
-            {/* Alert Message */}
+        {/* Alert Message */}
+
             {alert.show && (
-                <div className="alert alert-info mt-4">
-                    <span>{alert.message}</span>
-                </div>
+                <CustomAlert
+                    showAlert={alert.show}
+                    onClose={() => {
+                        setAlert(prevAlert => ({
+                            ...prevAlert,
+                            show: false,
+                            message: ""
+                        }));
+                    }}
+                    message={alert.message}
+                    duration={4000}
+                />
             )}
+
         </div>
     );
 };

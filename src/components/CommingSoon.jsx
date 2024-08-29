@@ -3,53 +3,13 @@ import NavBar from './NavBar';
 import AboutUsHomePage from './AboutUsHomePage';
 import ContactUs from './ContactUs';
 import Footer from './Footer';
-import React, { useState, useEffect, useRef } from 'react';
-import { useDispatch } from 'react-redux';
-import { setstickactiveValue } from './store/stickactive'
+import React from 'react';
+
 
 const ComingSoon = () => {
-    const navRef = useRef(null); // Define the ref
-    const [scrollTop, setScrollTop] = useState(0);
-    const [navHeight, setNavHeight] = useState(0); // Renamed for clarity
-
-  
-    const dispatch = useDispatch();
-  
-    const handleScroll = () => {
-      setScrollTop(window.scrollY);
-    };
-  
-    const updateNavHeight = () => {
-      if (navRef.current) {
-        const { height } = navRef.current.getBoundingClientRect();
-        setNavHeight(height);
-      }
-    };
-  
-    useEffect(() => {
-      updateNavHeight();
-      window.addEventListener('resize', updateNavHeight);
-      window.addEventListener('scroll', handleScroll);
-  
-      return () => {
-        window.removeEventListener('resize', updateNavHeight);
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
-  
-    useEffect(() => {
-      const threshold = 200; // Adjust this threshold as needed
-     // Adjust this value if necessary
-  
-      if (scrollTop > threshold) {
-        dispatch(setstickactiveValue(true));
-      } else {
-        dispatch(setstickactiveValue(false));
-      }
-    }, [scrollTop, navHeight, dispatch]);
 
     return (
-        <div ref={navRef}>
+        <div>
             <NavBar />
    
        

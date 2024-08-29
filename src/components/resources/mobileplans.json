@@ -1,0 +1,222 @@
+[
+{
+  "storageRange": "1 GB",
+  "price": 999,
+  "name": "Popular Choice",
+  "description": "Our most popular plan, offering ample space for a wide range of uses.",
+  "reviews": {
+    "count": 300000,
+    "rating": 4.5
+  }
+},
+    {
+      "storageRange": "10 MB",
+      "price": 99,
+      "name": "Basic Starter",
+      "description": "Ideal for minimal storage needs. Perfect for small personal projects.",
+      "reviews": {
+        "count": 100000,
+        "rating": 3.5
+      }
+    },
+    {
+      "storageRange": "20 MB",
+      "price": 199,
+      "name": "Entry Level",
+      "description": "Great for small businesses or hobbyists needing a bit more space.",
+      "reviews": {
+        "count": 200000,
+        "rating": 4.0
+      }
+    },
+    {
+      "storageRange": "30 MB",
+      "price": 299,
+      "name": "Essential Plan",
+      "description": "A solid choice for growing needs with moderate storage requirements.",
+      "reviews": {
+        "count": 150000,
+        "rating": 4.2
+      }
+    },
+    {
+      "storageRange": "50 MB",
+      "price": 499,
+      "name": "Growth Plan",
+      "description": "Perfect for expanding projects and small business applications.",
+      "reviews": {
+        "count": 120000,
+        "rating": 4.3
+      }
+    },
+    {
+      "storageRange": "2 GB",
+      "price": 1599,
+      "name": "Advanced Plan",
+      "description": "For more demanding needs with significant storage capacity.",
+      "reviews": {
+        "count": 250000,
+        "rating": 4.4
+      }
+    },
+    {
+      "storageRange": "3 GB",
+      "price": 1999,
+      "name": "Professional Plan",
+      "description": "Designed for professionals requiring extra storage for large files and projects.",
+      "reviews": {
+        "count": 180000,
+        "rating": 4.6
+      }
+    },
+    {
+      "storageRange": "5 GB",
+      "price": 2999,
+      "name": "Business Plan",
+      "description": "Ideal for small businesses needing substantial storage capacity.",
+      "reviews": {
+        "count": 220000,
+        "rating": 4.7
+      }
+    },
+    {
+      "storageRange": "10 GB",
+      "price": 5999,
+      "name": "Enterprise Starter",
+      "description": "Great for enterprises beginning to scale, with plenty of room for growth.",
+      "reviews": {
+        "count": 210000,
+        "rating": 4.8
+      }
+    },
+    {
+      "storageRange": "15 GB",
+      "price": 9999,
+      "name": "Enterprise Plan",
+      "description": "A robust plan for established businesses requiring substantial storage.",
+      "reviews": {
+        "count": 140000,
+        "rating": 4.5
+      }
+    },
+    {
+      "storageRange": "20 GB",
+      "price": 12999,
+      "name": "Premium Enterprise",
+      "description": "For premium needs with extensive storage requirements.",
+      "reviews": {
+        "count": 130000,
+        "rating": 4.6
+      }
+    },
+    {
+      "storageRange": "25 GB",
+      "price": 15999,
+      "name": "Ultimate Plan",
+      "description": "Provides ample storage for very large files and extensive data.",
+      "reviews": {
+        "count": 110000,
+        "rating": 4.7
+      }
+    },
+    {
+      "storageRange": "30 GB",
+      "price": 19999,
+      "name": "Max Capacity",
+      "description": "Offers maximum storage for high-volume needs and intensive applications.",
+      "reviews": {
+        "count": 95000,
+        "rating": 4.6
+      }
+    },
+    {
+      "storageRange": "35 GB",
+      "price": 22999,
+      "name": "Elite Plan",
+      "description": "For elite users with very high storage demands.",
+      "reviews": {
+        "count": 80000,
+        "rating": 4.4
+      }
+    },
+    {
+      "storageRange": "40 GB",
+      "price": 25999,
+      "name": "Superior Plan",
+      "description": "Top-tier storage solution for extensive data and business needs.",
+      "reviews": {
+        "count": 75000,
+        "rating": 4.5
+      }
+    },
+    {
+      "storageRange": "45 GB",
+      "price": 29999,
+      "name": "Max Plus",
+      "description": "Provides extra capacity for the most demanding storage needs.",
+      "reviews": {
+        "count": 70000,
+        "rating": 4.6
+      }
+    },
+    {
+      "storageRange": "50 GB",
+      "price": 34999,
+      "name": "Top Tier",
+      "description": "The highest level of storage, designed for the largest data requirements.",
+      "reviews": {
+        "count": 65000,
+        "rating": 4.7
+      }
+    },
+    {
+      "storageRange": "60 GB",
+      "price": 44999,
+      "name": "Extended Capacity",
+      "description": "For users with extremely large storage needs and data-intensive tasks.",
+      "reviews": {
+        "count": 60000,
+        "rating": 4.5
+      }
+    },
+    {
+      "storageRange": "70 GB",
+      "price": 54999,
+      "name": "Professional Plus",
+      "description": "Advanced plan offering extensive storage for large-scale operations.",
+      "reviews": {
+        "count": 55000,
+        "rating": 4.6
+      }
+    },
+    {
+      "storageRange": "80 GB",
+      "price": 64999,
+      "name": "Premium Plus",
+      "description": "Premium plan for users needing vast storage capacities.",
+      "reviews": {
+        "count": 50000,
+        "rating": 4.4
+      }
+    },
+    {
+      "storageRange": "90 GB",
+      "price": 74999,
+      "name": "Ultimate Plus",
+      "description": "Top-of-the-line storage plan for the highest data demands.",
+      "reviews": {
+        "count": 45000,
+        "rating": 4.3
+      }
+    },
+    {
+      "storageRange": "1 TB",
+      "price": 79999,
+      "name": "Mega Plan",
+      "description": "Unmatched storage capacity for the most demanding users.",
+      "reviews": {
+        "count": 40000,
+        "rating": 4.5
+      }
+    }
+  ]

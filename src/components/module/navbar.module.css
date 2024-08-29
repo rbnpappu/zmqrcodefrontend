@@ -36,14 +36,11 @@ body {
 .vedioCard {
     display: grid;
     grid-template-columns: 1fr; 
-    gap: 1rem; 
     padding: 1rem; 
-    margin-top: 1rem; 
+    margin: 16px; 
     border-radius: 0.5rem; 
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-
 .vedio {
     margin-top: 1rem;
     margin-left: 5rem;
@@ -246,6 +243,7 @@ body {
     padding-left: 1.25rem; /* Adjust padding as needed */
     padding-right: 1.25rem; /* Adjust padding as needed */
   }
+
 /* Responsive Styles */
 @media (max-width: 960px) {
     .formsignupandlogin{
@@ -273,16 +271,15 @@ body {
 
     .vedioCard {
         flex-direction: column;
-        width: 100%;
-        margin: 0;
-        padding: 0;
+        margin: 16px; 
+        width: 90%;
     }
 
     .vedio {
         margin-left: 0;
-        width: 95%;
-        margin: 12px;
+        margin:0;
         padding: 0;
+        width: 92%;
     }
 
     .vedioComponent {
@@ -369,6 +366,11 @@ body {
                     rgba(0, 0, 0, 0.12) 0px 4px 6px,
                     rgba(0, 0, 0, 0.17) 0px 12px 13px,
                     rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+
+      .formsignupandlogin{
+        padding: 0;
+        width: 92%;
       }
   
 }

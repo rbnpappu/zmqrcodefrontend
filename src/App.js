@@ -8,11 +8,15 @@ import QrCode from './components/QRCODESERVICES/QrCode'; // Ensure the correct p
 import ComingSoon from './components/CommingSoon'; // Ensure the correct path to ComingSoon
 import FAQ from './components/FAQ'; // Ensure the correct path to FAQ
 import TermsAndService from './components/TermsAndService'; // Ensure the correct path to TermsAndService
+import NavigationTracker from './components/NavigationTrackerForFindChangesinNavigation';
+import ScrollEventTracker from './components/ScrollEventTracker';
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
+        <NavigationTracker /> {/* Include NavigationTracker here */}
+        <ScrollEventTracker/>
         <div className="App">
           <Routes>
             <Route path="/" element={<HomePage />} />

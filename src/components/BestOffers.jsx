@@ -5,6 +5,7 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import plans from './resources/plans.json';
 import PlansCard from './PlansCard';
 import PlansCardForMobile from './PlansCardForMobile';
+import mobileplans from './resources/mobileplans.json';
 
 const BestOffers = () => {
     const chunkSize = 4;
@@ -42,7 +43,7 @@ const BestOffers = () => {
   // Function to handle the "Next" button click for mobile
   const handleNextForMobile = () => {
     setCurrentIndexForMobile((prevIndex) => {
-      const newIndex = (prevIndex + chunkSizeForMobile) % plans.length;
+      const newIndex = (prevIndex + chunkSizeForMobile) % mobileplans.length;
       return newIndex;
     });
   };
@@ -50,18 +51,18 @@ const BestOffers = () => {
   // Function to handle the "Previous" button click for mobile
   const handlePreviousForMobile = () => {
     setCurrentIndexForMobile((prevIndex) => {
-      const newIndex = (prevIndex - chunkSizeForMobile + plans.length) % plans.length;
+      const newIndex = (prevIndex - chunkSizeForMobile + mobileplans.length) % mobileplans.length;
       return newIndex;
     });
   };
 
   // Function to get visible plans for mobile
   const getVisiblePlansForMobile = () => {
-    const endIndex = (currentIndexForMobile + chunkSizeForMobile) % plans.length;
+    const endIndex = (currentIndexForMobile + chunkSizeForMobile) % mobileplans.length;
     if (endIndex > currentIndexForMobile) {
-      return plans.slice(currentIndexForMobile, endIndex);
+      return mobileplans.slice(currentIndexForMobile, endIndex);
     } else {
-      return plans.slice(currentIndexForMobile).concat(plans.slice(0, endIndex));
+      return mobileplans.slice(currentIndexForMobile).concat(plans.slice(0, endIndex));
     }
   };
 

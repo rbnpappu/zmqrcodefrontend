@@ -2,10 +2,10 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle} from '@fortawesome/free-brands-svg-icons';
 
-
 const GoogleLoginButton = () => {
   const handleLogin = () => {
     window.location.href = 'http://localhost:3000/auth/google';
+    
   };
 
   return (
